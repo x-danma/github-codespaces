@@ -1,8 +1,13 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/dotnet:2": {},
-    "ghcr.io/warrenbuckley/codespace-features/smtp4dev:1": {}
-  }
+	"dockerComposeFile": "docker-compose.yml",
+    "service": "devcontainer",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+		"features": {
+		"ghcr.io/warrenbuckley/codespace-features/smtp4dev:1": {
+			"autorun": true,
+			"webport": "5000",
+			"smtpport": "25",
+			"imapport": "143"
+		}
+	}
 }
