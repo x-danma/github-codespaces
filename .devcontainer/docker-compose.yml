@@ -17,5 +17,13 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
 
+  idp:
+    container_name: idp
+    image: quay.io/keycloak/keycloak:latest
+
+  pgadmin:
+    container_name: pgadmin
+    image: docker.io/dpage/pgadmin4:latest
+
 volumes:
   postgres-data:

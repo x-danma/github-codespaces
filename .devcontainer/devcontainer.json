@@ -1,8 +1,8 @@
 {
 	"dockerComposeFile": "docker-compose.yml",
-    "service": "devcontainer",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-		"features": {
+	"service": "devcontainer",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
 		"ghcr.io/warrenbuckley/codespace-features/smtp4dev:1": {
 			"autorun": true,
 			"webport": "5000",
@@ -13,7 +13,7 @@
 	"customizations": {
 		"codespaces": {
 			"repositories": {
-				"x-danma/codespaces-test-backend":{
+				"x-danma/codespaces-test-backend": {
 					"permissions": {
 						"contents": "write",
 						"pull_requests": "write",
@@ -21,6 +21,14 @@
 					}
 				}
 			}
-		}
+		},
+	},
+	"vscode": {
+		"extensions": [
+			"ms-mssql.mssql",
+			"mtxr.sqltools",
+			"eamodio.gitlens",
+			"DavidAnson.vscode-markdownlint"
+		]
 	}
 }
