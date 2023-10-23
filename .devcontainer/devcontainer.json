@@ -9,5 +9,18 @@
 			"smtpport": "25",
 			"imapport": "143"
 		}
+	},
+	"customizations": {
+		"codespaces": {
+			"repositories": {
+				"x-danma/codespaces-test-backend":{
+					"permissions": {
+						"contents": "write",
+						"pull_requests": "write",
+						"repository_projects": "write"
+					}
+				}
+			}
+		}
 	}
 }
