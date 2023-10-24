@@ -3,15 +3,9 @@
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"postCreateCommand": "./post-create.sh",
-	"postStartCommand": "dotnet",
-	"features": {
-		"ghcr.io/warrenbuckley/codespace-features/smtp4dev:1": {
-			"autorun": true,
-			"webport": "5000",
-			"smtpport": "25",
-			"imapport": "143"
-		}
-	},
+	"postAttachCommand": {
+		"server": "./.devcontainer/post-create.sh"
+	  },
 	"customizations": {
 		"codespaces": {
 			"repositories": {
