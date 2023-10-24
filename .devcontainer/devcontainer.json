@@ -2,6 +2,8 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"postCreateCommand": "./post-create.sh",
+	"postStartCommand": "dotnet",
 	"features": {
 		"ghcr.io/warrenbuckley/codespace-features/smtp4dev:1": {
 			"autorun": true,
