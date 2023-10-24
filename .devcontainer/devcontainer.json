@@ -2,10 +2,11 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"postCreateCommand": "./post-create.sh",
+	"postCreateCommand": "./post-start.sh",
+	"postStartCommand": "",
 	"postAttachCommand": {
-		"server": "./.devcontainer/post-create.sh"
-	  },
+		"server": "./.devcontainer/post-start.sh"
+	},
 	"customizations": {
 		"codespaces": {
 			"repositories": {
