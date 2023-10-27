@@ -2,22 +2,28 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"postCreateCommand": "./post-start.sh",
+	"postCreateCommand": "./startup.sh",
 	"postStartCommand": "",
 	"postAttachCommand": {
-		"server": "./.devcontainer/post-start.sh"
+		"server": "./.devcontainer/startup.sh"
 	},
 	"customizations": {
 		"codespaces": {
 			"repositories": {
 				"x-danma/codespaces-test-backend": {
 					"permissions": {
+						"checks": "read",
 						"contents": "write",
 						"pull_requests": "write",
 						"repository_projects": "write"
 					}
 				}
 			}
+		},
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker"
+			]
 		},
 	},
 	"vscode": {
